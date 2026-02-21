@@ -10,12 +10,12 @@ export default function WishlistPage() {
   return (
     <main className="min-h-screen bg-[#f8f4ef] px-10 py-20">
       <h1 className="text-4xl text-center mb-10">
-        Your Wishlist 💖
+        Your Wishlist 
       </h1>
 
       {wishlist.length === 0 ? (
         <p className="text-center text-gray-500">
-          No items saved yet 💔
+          No items saved yet 
         </p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
