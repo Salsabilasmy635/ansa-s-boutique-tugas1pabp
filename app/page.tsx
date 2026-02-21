@@ -18,7 +18,7 @@ export default function Home() {
 
         <div className="relative bg-white/90 p-10 text-center shadow-lg max-w-xl">
           <h1 className="text-5xl font-serif text-[#5c4033] mb-4">
-            ANSA'S BOUTIQUE 
+            Ansa's Boutique
           </h1>
 
           <p className="text-gray-600 mb-6">

@@ -1,11 +1,12 @@
-import { WishlistProvider } from "./context/WishlistContent";
 import Navbar from "./components/Navbar";
+import { WishlistProvider } from "./context/WishlistContent";
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ANSA'S BOUTIQUE",
+  title: "Ansa'S BOUTIQUE",
   description: "Korean Boutique Project",
 };
 
@@ -26,7 +27,7 @@ export default function RootLayout({
           </main>
 
           <footer className="text-center py-10 text-sm text-gray-500">
-            © 2026 ANSA'S BOUTIQUE ✨
+            © 2026 Anggi Salsabila✨
           </footer>
 
         </WishlistProvider>
