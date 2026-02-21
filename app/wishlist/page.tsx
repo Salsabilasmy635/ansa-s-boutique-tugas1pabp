@@ -34,9 +34,10 @@ export default function WishlistPage() {
               <Image
                 src={item.thumbnail}
                 alt={item.title}
-                width={200}
-                height={200}
-                className="rounded-xl object-cover w-32 h-32"
+                width={150}
+                height={0}
+                className="w-40 h-auto rounded-xl" // h-auto bikin tinggi ngikutin gambar asli
+                style={{ height: 'auto' }}
                 />
 
               <h2 className="mt-4 text-lg font-semibold">

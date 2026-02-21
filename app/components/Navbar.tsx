@@ -47,22 +47,22 @@ export default function Navbar() {
 
       {/* 🔥 MENU MOBILE (TERPISAH DARI HEIGHT NAVBAR) */}
       {open && (
-        <div className="sm:hidden bg-white border-t flex flex-col items-center gap-6 py-6 shadow-md">
+        <div className="sm:hidden bg-white border-t flex flex-col items-center gap-6 py-6 shadow-md text-black">
 
-          <a href="/" onClick={() => setOpen(false)}>
+            <a href="/" onClick={() => setOpen(false)} className="hover:text-[#c8a27e]">
             Home
-          </a>
+            </a>
 
-          <a href="/products" onClick={() => setOpen(false)}>
+            <a href="/products" onClick={() => setOpen(false)} className="hover:text-[#c8a27e]">
             Collection
-          </a>
+            </a>
 
-          <a href="/wishlist" onClick={() => setOpen(false)}>
+            <a href="/wishlist" onClick={() => setOpen(false)} className="hover:text-[#c8a27e]">
             Wishlist ({wishlist.length})
-          </a>
+            </a>
 
         </div>
-      )}
+        )}
 
     </nav>
   );
