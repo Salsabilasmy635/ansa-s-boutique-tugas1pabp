@@ -17,12 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#f8f4ef] text-[#4b3a2f] font-serif">
-
+      <body className="bg-[#f8f4ef] text-[#4b3a2f] font-serif flex flex-col min-h-screen">
         <WishlistProvider>
           <Navbar />
 
-          <main className="pt-24 min-h-screen">
+          <main className="pt-24 min-h-[100dvh] flex-1">
             {children}
           </main>
 
