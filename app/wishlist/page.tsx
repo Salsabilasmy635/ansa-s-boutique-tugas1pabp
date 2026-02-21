@@ -2,14 +2,15 @@
 
 import { useWishlist } from "../context/WishlistContent";
 import Image from "next/image";
-const { wishlist, removeFromWishlist } = useWishlist();
 
 export default function WishlistPage() {
-  const { wishlist } = useWishlist();
+  const { wishlist, removeFromWishlist } = useWishlist();
 
   return (
     <main className="min-h-screen bg-[#f8f4ef] px-10 py-20">
-      <h1 className="text-4xl text-center mb-10">Your Wishlist 💖</h1>
+      <h1 className="text-4xl text-center mb-10">
+        Your Wishlist 💖
+      </h1>
 
       {wishlist.length === 0 ? (
         <p className="text-center text-gray-500">
@@ -17,18 +18,17 @@ export default function WishlistPage() {
         </p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {wishlist.map((item) => (
+          {wishlist.map((item: any) => (
             <div
               key={item.id}
               className="bg-white rounded-2xl shadow-md p-5"
             >
-
-            <button
+              <button
                 onClick={() => removeFromWishlist(item.id)}
                 className="mt-3 bg-red-500 text-white px-4 py-1 rounded-lg"
-            >
+              >
                 Remove
-            </button>
+              </button>
 
               <Image
                 src={item.thumbnail}
