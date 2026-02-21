@@ -1,0 +1,50 @@
+"use client";
+
+import { useWishlist } from "../context/WishlistContent";
+import Image from "next/image";
+const { wishlist, removeFromWishlist } = useWishlist();
+
+export default function WishlistPage() {
+  const { wishlist } = useWishlist();
+
+  return (
+    <main className="min-h-screen bg-[#f8f4ef] px-10 py-20">
+      <h1 className="text-4xl text-center mb-10">Your Wishlist 💖</h1>
+
+      {wishlist.length === 0 ? (
+        <p className="text-center text-gray-500">
+          No items saved yet 💔
+        </p>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {wishlist.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white rounded-2xl shadow-md p-5"
+            >
+
+            <button
+                onClick={() => removeFromWishlist(item.id)}
+                className="mt-3 bg-red-500 text-white px-4 py-1 rounded-lg"
+            >
+                Remove
+            </button>
+
+              <Image
+                src={item.thumbnail}
+                alt={item.title}
+                width={300}
+                height={300}
+                className="rounded-xl object-cover"
+              />
+
+              <h2 className="mt-4 text-lg font-semibold">
+                {item.title}
+              </h2>
+            </div>
+          ))}
+        </div>
+      )}
+    </main>
+  );
+}

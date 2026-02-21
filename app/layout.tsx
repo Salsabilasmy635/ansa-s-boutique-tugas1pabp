@@ -1,3 +1,4 @@
+import { WishlistProvider } from "./context/WishlistContent";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -24,10 +25,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      
+      <body className="bg-[#f8f4ef] text-[#4b3a2f] font-serif">
+        <WishlistProvider>
+          <nav className="flex justify-between items-center px-10 py-6 bg-white shadow-sm">
+            <h1 className="font-serif text-2xl tracking-wide">
+              ANSA BOUTIQUE
+            </h1>
+
+            <div className="space-x-8 text-sm">
+              <a href="/" className="hover:text-[#c8a27e] transition">
+                Home
+              </a>
+              <a href="/products" className="hover:text-[#c8a27e] transition">
+                Collection
+              </a>
+            </div>
+          </nav>
+
+          {children}
+
+          <footer className="text-center py-10 text-sm text-gray-500">
+            © 2026 ANSA'S BOUTIQUE. Styled by Anggi ✨
+          </footer>
+        </WishlistProvider>
       </body>
     </html>
   );
