@@ -26,7 +26,7 @@ export default function ProductList({
         Wishlist Items: {wishlist.length}
       </p>
 
-      <div className="w-full h-64 flex items-center justify-center bg-white rounded-t-2xl overflow-hidden">
+      <div className="w-full bg-white rounded-t-2xl p-6 flex items-center justify-center">
         {products?.map((product: any) => (
           <div
             key={product.id}
@@ -35,7 +35,7 @@ export default function ProductList({
             <img
               src={product.thumbnail}
               alt={product.title}
-              className="max-h-full max-w-full object-contain"
+              className="max-h-48 w-auto object-contain"
               />
 
             <button
