@@ -4,7 +4,19 @@ import { useWishlist } from "../context/WishlistContent";
 import { Heart } from "lucide-react";
 import Link from "next/link";
 
-export default function ProductList({ products }: any) {
+
+type Product = {
+  id: number;
+  title: string;
+  thumbnail: string;
+  price: number;
+};
+
+export default function ProductList({
+  products,
+}: {
+  products: Product[];
+}) {
   const { addToWishlist, removeFromWishlist, isInWishlist, wishlist } =
     useWishlist();
 
@@ -32,13 +44,11 @@ export default function ProductList({ products }: any) {
                   ? removeFromWishlist(product.id)
                   : addToWishlist(product)
               }
-              className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md"
+              className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md z-10"
             >
-              <Heart
-                size={20}
-                fill={isInWishlist(product.id) ? "red" : "none"}
-                color="red"
-              />
+              <span className="text-red-500 text-xl">
+                {isInWishlist(product.id) ? "❤️" : "🤍"}
+              </span>
             </button>
 
             <div className="p-6 text-center">
