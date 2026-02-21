@@ -9,17 +9,33 @@ export default function ProductsPage() {
   const [products, setProducts] = useState<any[]>([]);
 
   useEffect(() => {
-    async function getProducts() {
-      const res = await fetch(
-        "https://dummyjson.com/products/category/womens-dresses",
-        { cache: "no-store" }
-      );
-      const data = await res.json();
-      setProducts(data.products);
-    }
+  async function getProducts() {
+    const categories = [
+      "womens-dresses",
+      "womens-shoes",
+      "womens-bags",
+      "womens-jewellery",
+      "mens-shirts",
+      "mens-pants",
+    ];
 
-    getProducts();
-  }, []);
+    const responses = await Promise.all(
+      categories.map((category) =>
+        fetch(`https://dummyjson.com/products/category/${category}`, {
+          cache: "no-store",
+        }).then((res) => res.json())
+      )
+    );
+
+    const allProducts = responses.flatMap(
+      (data) => data.products
+    );
+
+    setProducts(allProducts);
+  }
+
+  getProducts();
+}, []);
 
   return (
     <main className="min-h-screen pt-28 pb-20 px-10">

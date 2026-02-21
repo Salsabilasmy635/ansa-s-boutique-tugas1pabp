@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "cdn.dummyjson.com", // ✅ TAMBAH INI
+        hostname: "cdn.dummyjson.com", 
       },
     ],
   },
