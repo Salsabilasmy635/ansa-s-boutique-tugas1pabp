@@ -35,7 +35,7 @@ export default function WishlistPage() {
                 src={item.thumbnail}
                 alt={item.title}
                 width={200}
-                height={200}
+                height={150}
                 className="rounded-xl object-cover"
                 />
 
