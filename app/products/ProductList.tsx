@@ -26,7 +26,7 @@ export default function ProductList({
         Wishlist Items: {wishlist.length}
       </p>
 
-      <div className="w-full bg-white rounded-t-2xl p-6 flex items-center justify-center">
+      <div className="w-full bg-white p-6 flex items-center justify-center rounded-t-2xl">
         {products?.map((product: any) => (
           <div
             key={product.id}
