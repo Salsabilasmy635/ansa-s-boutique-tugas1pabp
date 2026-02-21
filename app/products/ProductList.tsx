@@ -35,7 +35,7 @@ export default function ProductList({
             className="relative bg-white border border-[#e8d8c3] rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
           >
 
-            <div className="w-full bg-white p-6 flex items-center justify-center">
+            <div className="w-full p-6 flex items-center justify-center">
               <img
                 src={product.thumbnail}
                 alt={product.title}
