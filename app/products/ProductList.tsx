@@ -35,7 +35,7 @@ export default function ProductList({
             <img
               src={product.thumbnail}
               alt={product.title}
-              className="w-full h-72 object-cover rounded-t-2xl"
+              className="w-full h-48 object-cover rounded-t-2xl"
             />
 
             <button
