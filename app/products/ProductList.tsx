@@ -30,7 +30,7 @@ export default function ProductList({
         {products?.map((product: any) => (
           <div
             key={product.id}
-            className="relative bg-white border border-[#e8d8c3] rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+            className="relative bg-white border border-[#e8d8c3] rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
           >
             <img
               src={product.thumbnail}
