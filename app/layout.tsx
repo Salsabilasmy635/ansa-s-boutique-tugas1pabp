@@ -28,17 +28,20 @@ export default function RootLayout({
       
       <body className="bg-[#f8f4ef] text-[#4b3a2f] font-serif">
         <WishlistProvider>
-          <nav className="flex justify-between items-center px-10 py-6 bg-white shadow-sm">
-            <h1 className="font-serif text-2xl tracking-wide">
-              ANSA BOUTIQUE
+          <nav className="flex flex-col sm:flex-row justify-between items-center px-6 sm:px-10 py-4 bg-white shadow-sm gap-4">
+            <h1 className="text-xl sm:text-2xl font-serif tracking-wide text-center">
+              ANSA'S BOUTIQUE
             </h1>
 
-            <div className="space-x-8 text-sm">
+            <div className="flex gap-6 text-sm flex-wrap justify-center">
               <a href="/" className="hover:text-[#c8a27e] transition">
                 Home
               </a>
               <a href="/products" className="hover:text-[#c8a27e] transition">
                 Collection
+              </a>
+              <a href="/wishlist" className="hover:text-[#c8a27e] transition">
+                Wishlist
               </a>
             </div>
           </nav>
