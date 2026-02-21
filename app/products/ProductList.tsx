@@ -26,17 +26,22 @@ export default function ProductList({
         Wishlist Items: {wishlist.length}
       </p>
 
-      <div className="w-full bg-white p-6 flex items-center justify-center rounded-t-2xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+
         {products?.map((product: any) => (
+
           <div
             key={product.id}
             className="relative bg-white border border-[#e8d8c3] rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
           >
-            <img
-              src={product.thumbnail}
-              alt={product.title}
-              className="max-h-48 w-auto object-contain"
+
+            <div className="w-full bg-white p-6 flex items-center justify-center">
+              <img
+                src={product.thumbnail}
+                alt={product.title}
+                className="max-h-48 w-auto object-contain"
               />
+            </div>
 
             <button
               onClick={() =>
@@ -66,9 +71,12 @@ export default function ProductList({
               >
                 View Details
               </Link>
+
             </div>
+
           </div>
         ))}
+
       </div>
     </>
   );
