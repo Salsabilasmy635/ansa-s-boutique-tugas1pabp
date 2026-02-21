@@ -38,7 +38,7 @@ export default function ProductsPage() {
 }, []);
 
   return (
-    <main className="min-h-[100vh] bg-[#f8f4ef] pt-28 pb-20 px-10">
+    <main className="min-h-full bg-[#f8f4ef] pt-28 pb-20 px-10">
       <h1 className="text-4xl font-serif text-center mb-10 text-[#5c4033]">
         Ansa's OOTD Collection
       </h1>
