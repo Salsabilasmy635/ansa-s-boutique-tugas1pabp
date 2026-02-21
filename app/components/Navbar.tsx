@@ -15,7 +15,7 @@ export default function Navbar() {
 
         {/* TITLE */}
         <h1 className="text-xl font-serif text-black">
-          ANSA'S BOUTIQUE
+          Ansa's Boutique ✨
         </h1>
 
         {/* HAMBURGER */}
