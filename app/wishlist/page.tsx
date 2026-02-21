@@ -9,7 +9,7 @@ export default function WishlistPage() {
   console.log(wishlist);
   return (
     <main className="min-h-[100dvh] bg-[#f8f4ef] px-10 pt-28 pb-20">
-      <h1 className="text-3xl font-serif text-[#4b3a2f] opacity-100">
+      <h1 className="text-3xl font-serif text-[#4b3a2f] text-center">
         Your Wishlist 
       </h1>
 
