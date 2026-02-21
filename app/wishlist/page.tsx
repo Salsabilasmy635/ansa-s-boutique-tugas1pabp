@@ -18,7 +18,7 @@ export default function WishlistPage() {
           No items saved yet 
         </p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-16">
           {wishlist.map((item: any) => (
             <div
                 key={item.id}
@@ -34,7 +34,7 @@ export default function WishlistPage() {
               <Image
                 src={item.thumbnail}
                 alt={item.title}
-                width={200}
+                width={150}
                 height={200}
                 className="w-48 h-48 object-contain rounded-xl bg-white p-3"
                 />
