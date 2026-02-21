@@ -8,8 +8,8 @@ export default function WishlistPage() {
 
   console.log(wishlist);
   return (
-    <main className="min-h-screen bg-[#f8f4ef] px-10 py-20">
-      <h1 className="text-4xl text-center mb-10">
+    <main className="min-h-[100dvh] bg-[#f8f4ef] px-10 pt-28 pb-20">
+      <h1 className="text-3xl font-serif text-[#4b3a2f] opacity-100">
         Your Wishlist 
       </h1>
 
